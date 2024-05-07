@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${BD}
+    username: ${USERNAME}
+    password: ${PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update # ou "create-drop" para criar e dropar as tabelas a cada execução, ou "validate" para apenas validar o esquema
+    show-sql: true # exibir SQL no console
+    properties:
+      hibernate:
+        format_sql: true # formata SQL para melhor legibilidade
